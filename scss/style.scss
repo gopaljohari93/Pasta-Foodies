@@ -1,0 +1,883 @@
+/* fontface Google Fonts */
+@font-face {
+    font-family: 'Great Vibes';
+    src: url(/fonts/Great_Vibes/GreatVibes-Regular.ttf);
+}
+
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:active,
+:hover,
+:focus {
+    outline: 0 !important;
+    outline-offset: 0;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+================================
+    Custom Scollbar Smooth
+================================
+*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:'Great Vibes';
+    font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: red;
+}
+
+// Variable scss
+$primary-font: 'Poppins', sans-serif;
+
+/* import sass */
+@import "partials/variables";
+@import "partials/typography";
+@import "partials/media";
+@import "partials/products";
+@import "partials/about";
+
+/*
+=================================
+    1 Header Design
+=================================
+*/
+.header_wrapper .top_area {
+    background: $bg-white;
+    overflow: hidden;
+
+    /* 01 top bar */
+    .cont_list {
+        text-align: right;
+        margin-bottom: -10px;
+
+        ul {
+            display: inline-block;
+            list-style: none;
+
+            a {
+                font-size: 18px;
+                color: #666666;
+                margin-right: 33px;
+                font-family: $primary-font;
+
+                i {
+                    color: #777777;
+                    margin-right: 9px;
+                    font-size: 24px;
+                    filter: invert(100%);
+                }
+            }
+        }
+    }
+
+    /* 02 let bar social icon */
+    .social_media a {
+        font-size: 22px;
+        color: #4c4c4c;
+        margin-right: 12px;
+        filter: invert(50%);
+    }
+
+    /*  4 form right bar */
+    form {
+        display: flex;
+        height: 40px;
+        padding: 2px;
+        background-color: #f1f2f9;
+        min-width: 18% !important;
+        border-radius: 2px;
+
+        .searct-data {
+            width: 100%;
+            height: 100%;
+            padding: 0 10px;
+            color: #fff;
+            font-size: 17px;
+            border: none;
+            font-weight: 500;
+            background: none;
+        }
+
+        button {
+            padding: 0 15px;
+            color: #a2a3a3;
+            font-size: 17px;
+            border: none;
+            border-radius: 2px;
+            transition: .2s all;
+        }
+    }
+}
+
+/*
+=================================
+    Navbar Design
+=================================
+*/
+.navigation-wrap {
+    position: sticky;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.3s ease-out;
+}
+
+/* Change  navbar styling onscroll position: fixed */
+.navigation-wrap.scrollon {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: all 0.15s ease-out 0s;
+    background-color: #ffffff;
+}
+
+/* mobile menu icon outline css remove style */
+.navbar-toggler:focus {
+    outline: unset;
+    border: none;
+    box-shadow: none;
+}
+
+.navigation-wrap .nav-item {
+    margin: 0 12px;
+}
+
+.navigation-wrap .nav-link {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: $primary-font;
+    color: $color-navbar;
+}
+
+.navigation-wrap .nav-link:hover,
+.navigation-wrap .nav-link.active {
+    color: $color-red;
+}
+
+.navigation-wrap.scrollon:hover,
+.navigation-wrap.scrollon.active {
+    color: $color-red;
+}
+
+/*
+================================
+    2 Top Banner
+================================
+*/
+.top_banner {
+    padding: 0 10px;
+
+    .banner {
+        background-image: url('../images/banner.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 100%;
+        height: 480px;
+    }
+}
+
+/*
+================================
+    3 About 
+================================
+*/
+.about_wrapper {
+    padding: 10px 0;
+}
+
+.about_wrapper .about-section {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 430px;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.about_wrapper .about-img-1 {
+    background-image: url(../images/img-8.webp);
+}
+
+.about_wrapper .about-img-2 {
+    background-image: url(../images/img-1.webp);
+}
+
+.about_wrapper .about-img-3 {
+    background-image: url(../images/img-2.webp);
+}
+
+.about_wrapper .about-img-4 {
+    background-image: url(../images/img-3.webp);
+}
+
+.about_wrapper .about-img-5 {
+    background-image: url(../images/img-6.webp);
+}
+
+/* img-1 */
+.about_wrapper .about-img-1 .title-1 {
+    font-size: 24px;
+    text-align: center;
+    color: #bb0101;
+    padding: 3.5rem 6rem;
+    font-weight: 300;
+    font-family:'Great Vibes';
+    margin-left: 19rem;
+}
+
+.about_wrapper .about-img-1 .bombino-1 {
+    padding: 0 3.8rem;
+    margin-top: -50px;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: flex-end;
+    color: #ffffff;
+}
+
+.about_wrapper .about-img-1 .bom-sub-1 {
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 71px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.about_wrapper .main-btn {
+    float: right;
+    display: inline-block;
+    color: #fff;
+    background: #a90000;
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    margin-top: 3rem;
+    font-size: 14px;
+    font-family: $secondary-font;
+}
+
+/* sass */
+.about_wrapper .main-btn:hover {
+    background: darken($bg-dark-red, 15%);
+}
+
+.about_wrapper .btn {
+    margin-right: 17rem;
+}
+
+/* img-2 */
+.about_wrapper .about-img-2 .title-2 {
+    color: #cf4a49;
+    font-size: 24px;
+    padding: 3.438rem 2rem;
+    font-family:'Great Vibes';
+    font-weight: 300;
+}
+
+/* sass */
+.about_wrapper .about-img-2 .title-2:hover {
+    color: lighten($color-red, 15%)
+}
+
+.about_wrapper .about-img-2 .bombino-2 {
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.56);
+    color: #ffffff;
+    padding-left: 2rem;
+    margin-top: -50px;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.about_wrapper .about-img-2 .btn-1 {
+    float: none;
+    margin-left: 2.3rem;
+    margin-top: 8px;
+}
+
+/* img-3 */
+.about_wrapper .about-img-3 .bombino-3 {
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.56);
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 600;
+    padding: 10px 26px;
+}
+
+.about_wrapper .about-img-3 .btn-2 {
+    margin-right: 32px;
+    margin-top: 5px;
+}
+
+/* img-4 */
+.about_wrapper .about-img-4 .bombino-4 {
+    font-size: 26px;
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.56);
+    color: #ffffff;
+    padding: 1rem 0.75rem;
+    font-weight: 600;
+}
+
+/* img-5 */
+.about_wrapper .about-img-5 .bombino-5 {
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.56);
+    color: #ffffff;
+    padding: 1rem 1.75rem;
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.about_wrapper .about-img-5 .btn-3 {
+    float: left;
+    margin-left: 2rem;
+    margin-top: 0rem;
+}
+
+
+/*
+================================
+   4 Our Products 
+================================
+*/
+.products_wrapper {
+    padding: 20px 0 50px;
+}
+
+.products_wrapper h2 {
+    color: #a90000;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.25;
+    text-shadow: 3px 3px 2px #bca6a6;
+    font-family: 'Great Vibes';
+    margin-bottom: 42px;
+}
+
+.products_wrapper .box-serction {
+    padding: 6px 0 8px;
+    -webkit-box-shadow: -1px 1px 5px 6px rgba(242, 239, 242, 1);
+    -moz-box-shadow: -1px 1px 5px 6px rgba(242, 239, 242, 1);
+    box-shadow: -1px 1px 5px 6px rgba(242, 239, 242, 1);
+    max-width: 100%;
+    height: 324px;
+}
+
+.products_wrapper .box-serction img {
+    min-height: 300px;
+}
+
+.products_wrapper .box-serction img:hover {
+    transform: scale(1.2);
+    transition: all .5s ease-out 0s;
+}
+
+.products_wrapper .box-content {
+    margin-top: 40px;
+}
+
+.products_wrapper .box-content .sub-title {
+    color: #282828;
+    font-size: 28px;
+    font-style: normal;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: none;
+    letter-spacing: 0
+}
+
+.products_wrapper .box-content p {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: -1rem;
+    color: #929496;
+}
+
+.products_wrapper .box-content a {
+    color: #9a9a9a;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 3px solid #9a9a9a;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*  
+================================
+    5 Recipes
+================================
+*/
+.recipes_wrapper {
+    padding: 40px 0 20px;
+}
+
+.recipes_wrapper h2 {
+    font-size: 36px;
+    font-weight: 400;
+    font-style: italic;
+    color: #a90000;
+    margin-bottom: 30px;
+    text-shadow: 3px 3px 2px rgba(128, 0, 0, 1);
+    font-family: 'Great Vibes';
+}
+
+.recipes_wrapper .no-gutter {
+    --bs-gutter-x: 0rem;
+}
+
+.recipes_wrapper .pasta-1 img {
+    max-width: 100%;
+    height: 620px;
+    object-fit: cover;
+}
+
+.recipes_wrapper .pasta-2 {
+    background-image: url(../images/img-7.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.recipes_wrapper strong {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+    padding: 2rem 3rem;
+    margin: 4.875rem 3.125rem 0;
+    display: inline-block;
+    font-family: 'Great Vibes';
+}
+
+.recipes_wrapper h1 {
+    color: #a90000;
+    margin: -1rem 6.2rem;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 2px rgba(128, 0, 0, 1);
+    font-size: 46px;
+    font-weight: 600;
+}
+
+.recipes_wrapper p {
+    color: #fff;
+    max-width: 290px;
+    margin-left: 6.8rem;
+    margin-top: 3rem;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 4rem;
+}
+
+.recipes_wrapper .btn-more {
+    color: #000000;
+    background: #ffffff;
+    padding: 16px 46px;
+    margin-left: 6.8rem;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/*  
+================================
+    6 Career 
+================================
+*/
+
+/* mixin sass */
+@mixin block {
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 480px;
+}
+
+.career_wrapper {
+    padding: 50px 0 50px;
+}
+
+.career_wrapper .no-gutter {
+    --bs-gutter-x: 0rem;
+}
+
+.career_wrapper .career-1 {
+    background-image: url(../images/img-1.webp);
+    /* include sass */
+    @include block;
+}
+
+.career_wrapper .career-2 {
+    background-image: url(../images/img-2.webp);
+    /* include sass */
+    @include block;
+
+}
+
+.career_wrapper h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #a90000;
+    text-shadow: 3px 3px 2px rgba(128, 0, 0, 1);
+    font-family: 'Great Vibes';
+}
+
+.career_wrapper h1 {
+    color: #a7500c;
+    font-size: 50px;
+    font-weight: 400;
+    margin-left: 1rem;
+    margin-top: 8rem;
+    font-family: 'Great Vibes';
+    text-shadow: 3px 3px 2px #ffffff;
+}
+
+.career_wrapper .video-box {
+    position: relative;
+}
+
+.career_wrapper .video-box .play-btn a {
+    background: #2e2d2b;
+    color: #fff;
+    font-size: 26px;
+    width: 68px;
+    height: 47px;
+    position: absolute;
+    left: -105px;
+    right: 0;
+    top: 16px;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    border-radius: 25%;
+}
+
+.career_wrapper .video-box .play-btn a i {
+    line-height: 48px;
+    margin-left: 5px;
+    font-size: 25px;
+}
+
+/*  
+================================
+    7 media
+================================
+*/
+.newsletter {
+    padding: 22px 0 0px;
+    background: #ededed;
+    height: 100px;
+    margin: 0 1%;
+}
+
+.newsletter .contact-form {
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter .contact-form p {
+    font-size: 26px;
+    color: #282828;
+    font-weight: 600;
+    margin-top: 0rem;
+    font-family: cursive;
+    margin-right: 30px;
+}
+
+.newsletter .form-control {
+    height: 3.225rem;
+    padding: 0 1.25rem;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    box-shadow: none;
+}
+
+.newsletter .form-group {
+    display: flex;
+    width: 450px;
+}
+
+.newsletter .form-group .btn {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffff;
+    background: #a90000;
+    padding: 0px 26px;
+    height: 50px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: none;
+}
+
+.footer_wrapper .footer-link {
+    font-size: 14px;
+    font-weight: 400;
+    color: #232323;
+    margin-top: 5.6rem;
+    display: inline-block;
+}
+
+.footer_wrapper .footer-link .arrow {
+    padding: 0 9px;
+    font-size: 16px;
+}
+
+.footer_wrapper a i {
+    font-size: 1.5rem;
+    color: #7a7a7a;
+    padding: 0 7px;
+}
+
+.footer_wrapper .follow {
+    font-size: 22px;
+    font-weight: 400;
+    color: #989898;
+    margin-right: 8px;
+}
+
+.footer_wrapper .footer-creadit {
+    color: white;
+    border-top: 1px solid #232323;
+    padding-top: 20px;
+    max-width: 97%;
+    margin: 30px auto;
+}
+
+.footer_wrapper .copyright {
+    color: #232323;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/*  
+================================
+   Responsive media queries
+================================
+*/
+
+@media(max-width: 1300px) {
+
+    /* 01 top bar */
+    .header_wrapper .top_area .cont_list ul a {
+        margin-right: 12px;
+    }
+
+    /* about */
+    .about_wrapper .about-img-3 .bombino-3 {
+        font-size: 28px;
+    }
+}
+
+@media(max-width: 1230px) {
+
+    /* about */
+    .about_wrapper .about-img-3 .bombino-3 {
+        font-size: 24px;
+    }
+
+    /* left bar*/
+    .header_wrapper .top_area .social_media a {
+        font-size: 18px;
+        margin-right: 6px;
+    }
+
+    .products_wrapper .box-content .sub-title {
+        font-size: 28px;
+    }
+}
+
+@media(max-width: 1070px) {
+    .header_wrapper .header_top_area .short_contact_list ul li a {
+        font-size: 13px;
+    }
+
+    .header_wrapper .social_media_links a {
+        font-size: 16px;
+        margin-right: 8px;
+    }
+
+    .recipes_wrapper h1 {
+        font-size: 40px;
+    }
+
+    /* left bar*/
+    .header_wrapper .top_area .social_media a {
+        font-size: 18px;
+        margin-right: 6px;
+    }
+
+    /* Navbar Design */
+    .header_wrapper .top_area .social_media a {
+        font-size: 20px;
+        margin-right: 5px;
+    }
+    .about_wrapper .about-img-1 .title-1 {
+        margin-left: 0rem; 
+    }
+    .products_wrapper .box-content .sub-title {
+        font-size: 24px;
+    }
+}
+
+@media(max-width: 991px) {
+
+    /* navbar */
+    .navbar-toggler i {
+        color: $color-brown;
+        line-height: 2;
+    }
+
+    .navigation-wrap {
+        background: $bg-white;
+    }
+
+    .navigation-wrap .nav-link {
+        line-height: 1.875rem;
+        text-align: center;
+    }
+
+
+    /* about */
+    .about_wrapper .about-img-1 .bom-sub-1 {
+        margin-right: 15px;
+    }
+
+    .about_wrapper .btn {
+        margin-right: 8rem;
+        display: inline-block;
+    }
+
+    .recipes_wrapper h1 {
+        font-size: 36px;
+    }
+
+    .recipes_wrapper p {
+        font-size: 15px;
+    }
+
+    .newsletter .contact-form p {
+        font-size: 20px;
+    }
+    .products_wrapper .box-content a {
+        display: inline-block;
+        margin-bottom: 60px;
+    }
+    .recipes_wrapper h1 {
+        font-size: 25px;
+    }
+}
+
+@media(max-width: 767px) {
+    .recipes_wrapper h1 {
+        font-size: 28px;
+    }
+
+    .recipes_wrapper .pasta-2 {
+        height: auto;
+    }
+
+    .recipes_wrapper p {
+        margin-bottom: 1.5rem;
+    }
+
+    .newsletter .contact-form p {
+        font-size: 15px;
+    }
+
+    .newsletter .form-group .btn {
+        padding: 0 10px;
+    }
+
+    .about_wrapper .btn {
+        margin-right: 16rem;
+    }
+
+    .about_wrapper .about-img-1 .bom-sub-1 {
+        margin-right: 68px;
+    }
+
+    .about_wrapper .about-img-3 .btn-2 {
+        margin-right: 81%;
+        margin-top: 5px;
+    }
+
+    .products_wrapper .box-content a {
+        margin-bottom: 50px;
+        display: inline-block;
+    }
+    .about_wrapper .about-img-3 .btn-2 {
+        margin-right: 68%;
+    }
+    .recipes_wrapper .btn-more {
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+}
+
+@media(max-width: 330px) {
+    .about_wrapper .about-img-1 .bombino-1 {  
+        font-size: 25px;
+    }
+    .about_wrapper .about-img-1 .bom-sub-1 {
+        text-align: center;
+    }
+    .about_wrapper .btn {
+        margin-right: 8rem;
+    }
+    .about_wrapper .main-btn {
+        font-size: 12px;
+    }
+    .recipes_wrapper h1 {
+        font-size: 14px;
+    }
+    .recipes_wrapper p {
+        font-size: 10px;
+    }
+    .newsletter .contact-form p {
+        font-size: 10px;
+    }
+    .footer_wrapper a i {
+        font-size: 1rem;
+        padding: 0 5px;
+    }
+}
